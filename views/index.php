@@ -13,7 +13,7 @@
   <body class="light-mode">
     <nav class="navbar navbar-light bg-light justify-content-end" id="top-menu">
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
         <button class="btn btn-outline-dark mr-3" type="submit">
           <?php include("../images/Octicons/search.svg"); ?>
           <span class="btn-txt">
@@ -21,10 +21,13 @@
           </span>
         </button>
       </form>
-      <button id="dark-light-btn" class="btn btn-outline-dark top-nav-btn">
+      <button id="dark-btn" class="btn btn-outline-dark top-nav-btn">
         <?php include("../images/Octicons/telescope.svg"); ?>
-        <span class='top-nav-btn'><?php include("../images/Octicons/light-bulb.svg"); ?></span>
-        &nbsp;<span id="dark-light-btn-txt">dark</span>
+        &nbsp;<span id="btn-txt">dark</span>
+      </button>
+      <button id="light-btn" class="btn btn-outline-dark top-nav-btn" style="display:none;">
+        <?php include("../images/Octicons/light-bulb.svg"); ?>
+        &nbsp;<span id="btn-txt">light</span>
       </button>
     </nav>
     <!-- Credit: https://medium.com/wdstack/bootstrap-4-vertical-center-1211448a2eff -->
@@ -32,11 +35,11 @@
      <div class="col-sm-12 my-auto">
        <div class="text-center mx-auto w-75">
          <h1><strong>M. Gordon Morse</strong></h1>
-         <h4>Full-Stack Software Developer</h4>
+         <h4>Full-Stack Web Developer</h4>
          <p>-.- -. --- .-- .-.. . -.. --. . / .. ... / .--. --- .-- . .-.</p>
          <ul class="nav justify-content-center mb-3">
             <li class="nav-item mr-4">
-              <a class="btn btn-outline-dark" href="#">about me</a>
+              <a class="btn btn-outline-dark" href="./about-me.php">about me</a>
             </li>
             <li class="nav-item mr-4">
               <a class="btn btn-outline-dark" href="#">projects</a>
@@ -66,11 +69,8 @@
         $('#top-menu').toggleClass('navbar-dark bg-dark navbar-light bg-light');
         //Buttons
         //Credit: https://stackoverflow.com/questions/7002039/easiest-way-to-toggle-2-classes-in-jquery
-        if ($('#dark-light-btn-txt').text() === 'dark') {
-          $('#dark-light-btn-txt').text('light');
-        } else {
-          $('#dark-light-btn-txt').text('dark');
-        }
+        $('#light-btn').toggle();
+        $('#dark-btn').toggle();
         $('.btn').toggleClass('btn-outline-light btn-outline-dark');
         //SVGS (done)
         //Set session variable accordingly
@@ -78,7 +78,8 @@
 
       $(document).ready(function(){
         //Listener for click of dark/light button
-        $('#dark-light-btn').on('click', toggleBackground);
+        $('#light-btn').on('click', toggleBackground);
+        $('#dark-btn').on('click', toggleBackground);
       });
     </script>
   </body>

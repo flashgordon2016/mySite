@@ -30,10 +30,11 @@ body.light-mode button:hover #telescope-icon {
 }
 
 body.light-mode {
-  color: black;
+  color: #343a40;
   background-color: #f8f9fa;
 }
 /* end light mode styling */
+
 
 /* begin dark mode styling */
 body.dark-mode #top-menu svg {
