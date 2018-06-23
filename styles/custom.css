@@ -1,0 +1,57 @@
+html,body {
+  height: 90%;
+}
+
+.my-circle {
+  height: 90px;
+  width: 90px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#top-menu svg {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  fill: black;
+}
+
+
+/* begin light mode styling */
+body.light-mode #top-menu svg {
+  fill: black;
+}
+
+body.light-mode button:hover #search-icon,
+body.light-mode button:hover #telescope-icon {
+  fill: white;
+  transition: fill .15s ease-in-out;
+}
+
+body.light-mode {
+  color: black;
+  background-color: #f8f9fa;
+}
+/* end light mode styling */
+
+/* begin dark mode styling */
+body.dark-mode #top-menu svg {
+  fill: #f8f9fa;
+}
+
+body.dark-mode button:hover #search-icon,
+body.dark-mode button:hover #light-icon {
+  fill: #343a40;
+  transition: fill .15s ease-in-out;
+}
+
+body.dark-mode #telescope-icon {
+  display: hidden;
+}
+
+body.dark-mode {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+/* end dark mode styling */
