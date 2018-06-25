@@ -36,7 +36,7 @@
        <div class="text-center mx-auto w-75">
          <h1><strong>M. Gordon Morse</strong></h1>
          <h4>Full-Stack Web Developer</h4>
-         <p>-.- -. --- .-- .-.. . -.. --. . / .. ... / .--. --- .-- . .-.</p>
+         <p>..- -. -.. . .-. ... - .- -. -.. .-.-.- / -.-. .-. . .- - . .-.-.- / ... .. -- .--. .-.. .. ..-. -.-- .-.-.-</p>
          <ul class="nav justify-content-center mb-3">
             <li class="nav-item mr-4">
               <a class="btn btn-outline-dark" href="./about-me.php">about me</a>
@@ -60,27 +60,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      //Credit https://harlemsquirrel.github.io/css/javascript/2017/01/31/dark-light-mode-switcher.html
-      function toggleBackground(){
-        //Toggle black/white
-        $('body').toggleClass('light-mode dark-mode');
-        //Navbar
-        $('#top-menu').toggleClass('navbar-dark bg-dark navbar-light bg-light');
-        //Buttons
-        //Credit: https://stackoverflow.com/questions/7002039/easiest-way-to-toggle-2-classes-in-jquery
-        $('#light-btn').toggle();
-        $('#dark-btn').toggle();
-        $('.btn').toggleClass('btn-outline-light btn-outline-dark');
-        //SVGS (done)
-        //Set session variable accordingly
-      }
-
-      $(document).ready(function(){
-        //Listener for click of dark/light button
-        $('#light-btn').on('click', toggleBackground);
-        $('#dark-btn').on('click', toggleBackground);
-      });
-    </script>
+    <!-- Add custom scripts below -->
+    <script type="text/javascript" src="../scripts/toggleBackground.js"></script>
   </body>
 </html>
