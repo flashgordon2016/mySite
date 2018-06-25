@@ -12,15 +12,15 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
      <li class="nav-item mr-2">
-       <a class="btn btn-outline-dark" href="./about-me.php">about me</a>
+       <a id="aboutMeBtn" class="btn btn-outline-dark" href="./about-me.php">about me</a>
      </li>
-     <li class="nav-item mr-2">
+     <li id="projectBtn" class="nav-item mr-2">
        <a class="btn btn-outline-dark" href="#">projects</a>
      </li>
-     <li class="nav-item mr-2">
+     <li id="blogBtn" class="nav-item mr-2">
        <a class="btn btn-outline-dark" href="#">blog</a>
      </li>
-     <li class="nav-item mr-3">
+     <li id="contactBtn" class="nav-item mr-3">
        <a class="btn btn-outline-dark" href="#">contact me</a>
      </li>
    </ul>
